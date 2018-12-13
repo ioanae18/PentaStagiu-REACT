@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+   <html>
+        <head>
+            <meta charset = "UTF-8">
+            <meta name="viewport" content="width = device-width initial-scale = 1, user-scalable = yes">
+            <link href = "mystyle.css" rel = "stylesheet">
+
+            <title>
+                JavaScript Homework
+            </title>
+        </head>
+
+        <body>
+                <div>Hello JavaScript</div>
+
+                <button id = "button"> Click me </button>
+                <button id = "button1"> Click me </button>
+
+                <script>
+                        window.addEventListener("load", onPageLoad);
+
+                        function onPageLoad() 
+                        {
+                          console.log("The page loaded.");
+                          var div = document.getElementById("div");
+
+                          button.addEventListener("mouseenter", function(e)
+                          {
+                            button.style.cursor = "pointer";
+                            button.style.opacity = 0.5;
+                            button.style.backgroundcolor = "cornflowerblue";
+                            button.style.border = "solid chocolate 2px";
+                          });
+
+                          button.addEventListener("mouseleave", function(e)
+                          {
+                            button.style.cursor = "auto";
+                            button.style.backgroundcolor = "burlywood";
+                            button.style.border = "solid blueviolet 2px";
+                          });
+
+                          button.addEventListener("click", function(e)
+                          {
+                            var myObject =  {
+                               firstName: "Emilia-Ioana",
+                               lastName: "Ivan",
+                               fullName: function () {
+                                   return this.firstName + " " + this.lastName;
+                                }
+                            }
+                            window.alert(myObject.fullName());  
+                          });
+
+                          button1.addEventListener("mouseenter", function(e)
+                          {
+                            button1.style.cursor = "pointer";
+                            button1.style.opacity = 0.5;
+                            button1.style.backgroundcolor = "bisque";
+                            button1.style.border = "solid crimson 2px";
+                          });
+
+                          button1.addEventListener("mouseleave", function(e)
+                          {
+                            button1.style.cursor = "auto";
+                            button1.style.backgroundcolor = "darkcyan";
+                            button1.style.border = "solid blue 2px";
+                          });
+
+                          button1.addEventListener("click", function(e)
+                          {
+                            function Produs(x, y) 
+                            {
+                               return x * y;
+                            }
+
+                            var z = Produs(4, 3);
+        
+                            window.alert(z);
+                          });
+                        }
+                </script>
+        </body>
+   </html>

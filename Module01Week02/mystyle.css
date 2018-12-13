@@ -1,0 +1,13 @@
+button
+{
+    background-color: burlywood;
+    size: 30px;
+    padding: 10px;
+    border: solid chocolate 2px;
+}
+
+button:hover
+{
+    size: 30px;
+    border: solid blueviolet 2px;
+}
